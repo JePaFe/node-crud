@@ -1,0 +1,15 @@
+<h1>Inicio</h1>
+
+<a href="/create">Crear</a>
+
+<ul>
+    {{#each results}}
+        <li>
+            <a href="/show/{{id}}">
+                {{titulo}}
+            </a>
+            - <a href="/edit/{{id}}" class="btn btn-sm btn-primary">Editar</a>
+            - <a href="/destroy/{{id}}" class="btn btn-sm btn-danger">Borrar</a>
+        </li>
+    {{/each}}
+</ul>

@@ -1,0 +1,17 @@
+<form action="/update/{{articulo.id}}" method="POST">
+    <div>
+        <label for="titulo">Titulo</label>
+        <input type="text" value="{{articulo.titulo}}" name="titulo" id="titulo" autofocus>
+    </div>
+    <div>
+        <label for="cuerpo">Cuerpo</label>
+        <textarea name="cuerpo" id="cuerpo" cols="30" rows="10">{{articulo.cuerpo}}</textarea>
+    </div>
+    <div>
+        <label for="fecha_publicacion">Fecha de publicación</label>
+        <input type="date" value="{{articulo.fecha_publicacion}}" name="fecha_publicacion" id="fecha_publicacion">
+    </div>
+    <div>
+        <input type="submit">
+    </div>
+</form>
