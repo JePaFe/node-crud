@@ -1,0 +1,24 @@
+<h2>Login</h2>
+
+{{#if messages.error}}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        {{ messages.error }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+{{/if}}
+
+<form action="/signin" method="POST">
+    <div>
+        <label for="email">Correo</label>
+        <input type="email" name="email" id="email">
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+    </div>
+    <div>
+        <input type="submit">
+    </div>
+</form>
