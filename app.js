@@ -4,6 +4,9 @@ const exphbs = require('express-handlebars')
 
 const port = process.env.PORT || 3000
 
+const fileUpload = require('express-fileupload')
+app.use(fileUpload())
+
 const flash = require('express-flash')
 app.use(flash())
 
@@ -28,6 +31,7 @@ app.set('view engine', '.hbs')
 
 app.use(require('./routes'))
 app.use(require('./routes/auth'))
+app.use(require('./routes/uploads'))
 
 app.listen(port, () => {
     console.log(`http://localhost:${port}`)
